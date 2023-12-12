@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -73,7 +73,7 @@ html {
 
     display: grid;
     grid-template: 1fr 1fr / 5fr 2fr;
-    gap: 20px;
+    gap: 25px;
 }
 
 .projects {
@@ -88,15 +88,29 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: 1fr;
     grid-auto-rows: 1fr;
-    gap: 20px;
+    gap: 25px;
 }
 
 .announcements {
     grid-area: 1 / 2 / 2 / 3;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
-.trending {
+.top-cats {
     grid-area: 2 / 2 / 3 / 3;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.projects > p,
+.announcements > p,
+.top-cats > p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 5px 0 15px;
 }
 
 .card {
@@ -111,13 +125,6 @@ html {
 }
 
 .card > p:nth-child(2) {
-    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 1.05rem;
-}
-
-.projects > p,
-.announcements > p,
-.trending > p {
-    font-size: 1.4rem;
-    font-weight: 500;
 }
