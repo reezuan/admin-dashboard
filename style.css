@@ -5,6 +5,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     font-size: 16px;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
 body,
@@ -20,7 +21,7 @@ html {
     grid-template: 1fr 4fr / 1fr 4fr;
 }
 
-/* ----------------------------- HEADER ----------------------------- */
+/* ---------------------------- HEADER ---------------------------- */
 
 .header {
     background-color: #FAF9F6;
@@ -28,12 +29,11 @@ html {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-/* ---------- SIDEBAR ---------- */
+/* ---------------------------- SIDEBAR ---------------------------- */
 
 .sidebar {
     color: white;
     background-color: #0C0908;
-    font-family: Montserrat, Helvetica, sans-serif;
     font-weight: 500;
     padding: 20px;
 
@@ -63,10 +63,61 @@ html {
     font-size: 1.2rem;
 }
 
-/* ---------- MAIN CONTENT ---------- */
+/* ------------------------- MAIN CONTENT ------------------------- */
 
 .main-content {
     background-color: #D3D3D3;
+    padding: 25px 20px;
 
     grid-area: 2 / 2 / 3 / 3;
+
+    display: grid;
+    grid-template: 1fr 1fr / 5fr 2fr;
+    gap: 20px;
+}
+
+.projects {
+    grid-area: 1 / 1 / 3 / 2;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.projects > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+}
+
+.announcements {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.trending {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.card > p:first-child {
+    font-size: 1.35rem;
+    font-weight: 400;
+}
+
+.card > p:nth-child(2) {
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.05rem;
+}
+
+.projects > p,
+.announcements > p,
+.trending > p {
+    font-size: 1.4rem;
+    font-weight: 500;
 }
