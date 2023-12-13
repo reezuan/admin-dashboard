@@ -203,11 +203,67 @@ button {
     grid-template-rows: auto 1fr;
 }
 
+.announcements .card {
+    padding: 30px;
+    
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: start;
+    align-items: center;
+}
+
+.announcement-message .title {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0 0 5px;
+}
+
+.announcement-message .content {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
 .top-cats {
     grid-area: 2 / 2 / 3 / 3;
 
     display: grid;
     grid-template-rows: auto 1fr;
+}
+
+.top-cats .card {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.top-cats .card > div {
+    display: grid;
+    grid-template-columns: minmax(25px, 60px) 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 5px;
+}
+
+.top-cats .card p {
+    margin: 0;
+}
+
+.top-cat-pic {
+    width: 100%;
+    
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.top-cat-handle {
+    grid-area: 1 / 2 / 2 / 3;
+    align-self: end;
+}
+
+.top-cat-name {
+    color: #666362;
+
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: start;
 }
 
 .projects > p,
@@ -221,7 +277,7 @@ button {
 .card {
     background-color: white;
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     box-shadow: 3px 3px 4px #5C5C5C;
 }
 
@@ -234,3 +290,4 @@ button {
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 1.05rem;
 }
+
