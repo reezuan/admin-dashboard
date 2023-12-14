@@ -146,6 +146,8 @@ button {
     
     display: grid;
     grid-template-rows: repeat(3, auto);
+    align-content: start;
+    row-gap: 50px;
 }
 
 .nav-button {
@@ -214,12 +216,11 @@ button {
 
 .project-buttons {
     padding: 0 30px 20px 30px;
-
-    justify-self: end;
     
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-items: end;
+    justify-content: end;
     align-items: start;
     gap: 20px;
 }
